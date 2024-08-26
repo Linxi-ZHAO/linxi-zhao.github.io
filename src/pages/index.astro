@@ -10,69 +10,67 @@ const last_posts = posts.slice(0, 3);
 ---
 
 <BaseLayout sideBarActiveItemID="home">
-  <div class="pb-12 mt-5">
-    <div class="text-xl py-1">Hey there 👋</div>
-    <div class="text-5xl font-bold">I'm Manuel Ernesto</div>
-    <div class="text-3xl py-3 font-bold">Software Engineer and Entrepreneur</div>
-    <div class="py-2">
-      <text class="text-lg">
-        This is <b>Astrofy</b> a free and open-source template for your Personal Portfolio Website built with Astro and TailwindCSS.
-        Create in minutes a website with Blog, CV, Project Section, Store and RSS Feed. I hope you find
-        it useful!
-      </text>
+<div class="pb-12 mt-5">
+    <div class="text-3xl font-bold" style="font-family: 'Raleway', sans-serif;">Linxi Zhao</div>
+    <div class="text-l" style="color: #d3d3d3;">lz586 at cornell dot edu</div>
+
+    <div class="py-2 text-lg">
+        I am a first-year CS Ph.D. student at <a href="https://www.cs.cornell.edu/" target="_blank" style="color: #003366;">Cornell University</a>, specializing in machine learning with a focus on large language models. I earned my B.E. from <a href="https://www.xyc.tsinghua.edu.cn/en/index.htm" style="color: #003366;">Xinya College</a>, the liberal arts college at <a href="https://www.tsinghua.edu.cn/en/" style="color: #003366;">Tsinghua University</a>. During my undergraduate studies, I had the privilege of being mentored by <a href="https://web.cs.ucla.edu/~qgu/" style="color: #003366;">Prof. Quanquan Gu</a> at the <a href="https://www.uclaml.org/" style="color: #003366;">UCLA Artificial General Intelligence Lab</a> during a summer internship. I was also fortunate to work under the guidance of <a href="https://pi.cs.tsinghua.edu.cn/lab/people/YuntaoWang/" style="color: #003366;">Prof. Yuntao Wang</a> and <a href="https://iiis.tsinghua.edu.cn/zengjy/" style="color: #003366;">Prof. Jianyang Zeng</a> at Tsinghua University.
+        
+        <br><br>
     </div>
-    <div class="mt-8">
-      <a class="btn" href="https://twitter.com/manuelernestog" target="_blank"> Let's connect!</a>
-      <a href="https://github.com/manuelernestog/astrofy" target="_blank" class="btn btn-outline ml-5">
-        Get This template
-      </a>
+</div>
+
+<div class="pb-12 mt-5">
+    <div class="text-2xl font-bold" style="font-family: 'Raleway', sans-serif;">Research</div>
+
+    <HorizontalCard
+        title="Mitigating Object Hallucination in Large Vision-Language Models via Classifier-Free Guidance"
+        img="/hallu.webp"
+        desc="Linxi Zhao*, Yihe Deng*, Weitong Zhang, and Quanquan Gu"
+        url="#"
+    />
+    
+    <div class="py-2 text-right">
+        <p class="text-sm" style="color: #003366;">
+            <a href="https://arxiv.org/abs/2402.08680" target="_blank" class="hover:underline">arXiv</a>
+        </p>
     </div>
-  </div>
 
-  <div>
-    <div class="text-3xl w-full font-bold mb-2">My last projects {"</>"}</div>
-  </div>
+    <div class="divider my-0"></div>
 
-  <HorizontalCard
-    title="Demo Project 1"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="NEW"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Demo Project 2"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Demo Project 3"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="FOSS"
-  />
+    <HorizontalCard
+        title="A Comprehensive Dataset and Automated Pipeline for Nailfold Capillary Analysis"
+        img="/nailfold.webp"
+        desc="Linxi Zhao, Jiankai Tang, Dongyu Chen, Xiaohong Liu, Yong Zhou, Yuanchun Shi, Guangyu Wang, Yuntao Wang"
+        note="IEEE International Symposium on Biomedical Imaging (ISBI 2024)"
+        url="#"
+    />
 
-  <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-10">Latest from blog</div>
-  </div>
+    <div class="py-2 text-right">
+        <p class="text-sm" style="color: #003366;">
+            <a href="https://arxiv.org/abs/2312.05930" target="_blank" class="hover:underline">arXiv</a>
+            ，</a>
+            <a href="https://github.com/THU-CS-PI-LAB/ANFC-Automated-Nailfold-Capillary.git" target="_blank" class="hover:underline">Git repo</a>
+        </p>
+    </div>
+    <div class="divider my-0"></div>
+</div>
 
-  {
-    last_posts.map((post) => (
-      <>
-        <HorizontalCard
-          title={post.data.title}
-          img={post.data.heroImage}
-          desc={post.data.description}
-          url={"/blog/" + createSlug(post.data.title, post.slug)}
-          target="_self"
-          badge={post.data.badge}
-        />
-        <div class="divider my-0" />
-      </>
-    ))
-  }
+
+
+
+
+<div class="pb-12 mt-5">
+    <div class="text-2xl font-bold" style="font-family: 'Raleway', sans-serif;">Awards</div>
+
+    <div class="py-2 text-lg">
+        <ul class="list-disc pl-5 space-y-2">
+            <li>2024: Excellent Undergraduate Award, Tsinghua University</li>
+            <li>2024: Dean's List, Xinya College</li>
+            <li>2024: Outstanding Research Award, Xinya College</li>
+            <li>2023: Overseas Academic Research Fellowship, Tsinghua University</li>
+        </ul>
+    </div>
+</div>
 </BaseLayout>

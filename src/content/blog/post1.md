@@ -4,6 +4,7 @@ description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ei
 pubDate: "Sep 10 2022"
 heroImage: "/post_img.webp"
 tags: ["tokio"]
+note: "This is a demo post."
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
