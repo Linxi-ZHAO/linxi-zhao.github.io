@@ -6,6 +6,6 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://linxi.github.io',
-  base: 'my-web',
+  base: '',
   integrations: [mdx(), sitemap(), tailwind()]
 });
