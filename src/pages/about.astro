@@ -1,5 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import PhotoGallery from "../components/PhotoGallery.astro";
+import SportGallery from "../components/SportGallery.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
 import { getCollection } from "astro:content";
 import createSlug from "../lib/createSlug"
@@ -14,15 +16,23 @@ const last_posts = posts.slice(0, 3);
     <div class="text-3xl font-bold" style="font-family: 'Raleway', sans-serif;">About Me</div>
 
     <div class="py-2 text-lg">
-        I am a first-year CS Ph.D. student at Cornell, specializing in machine learning with a focus on large language models. I earned my B.E. from <a href="https://www.xyc.tsinghua.edu.cn/en/index.htm" style="color: #003366;">Xinya College</a>, the liberal arts college at <a href="https://www.tsinghua.edu.cn/en/" style="color: #003366;">Tsinghua University</a>. 
-        
-        <br><br>
-
+        I earned my B.E. from <a href="https://www.xyc.tsinghua.edu.cn/en/index.htm" style="color: #b85f77;">Xinya College</a>, the liberal arts college at <a href="https://www.tsinghua.edu.cn/en/" style="color: #b85f77;">Tsinghua University</a>. 
         Thanks to the Open Curriculum at Xinya College, I had the opportunity to explore my interests in a wide range of fields—Computer Science, Statistics, and Design—before ultimately dedicating myself to machine learning.
         
         <br><br>
 
-        Beyond academics, I’m passionate about volleyball and played on Tsinghua University's Volleyball Team (Non-Athlete Specialization). I also love film photography and enjoy visiting art galleries.
+        Beyond academics, I’m passionate about volleyball and played on <a href="https://www.instagram.com/p/C3z_15myGfn/?img_index=3" style="color: #b85f77;">Tsinghua Women's Volleyball Team B</a>. I also love film photography and enjoy visiting art galleries.
+    </div>
+    <!-- Add the Photo Gallery Section -->
+    <div class="mt-8">
+      <h2 class="text-2xl font-bold mb-4" style="font-family: 'Raleway', sans-serif;">Through the Lens (2024)</h2>
+      <PhotoGallery />
+    </div>
+
+    <!-- Add the Sports Gallery Section -->
+    <div class="mt-8">
+      <h2 class="text-2xl font-bold mb-4" style="font-family: 'Raleway', sans-serif;">On the Court</h2>
+      <SportGallery />
     </div>
 </div>
 </BaseLayout>

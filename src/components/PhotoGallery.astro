@@ -1,0 +1,76 @@
+---
+const images = [
+  { src: "/gallery/AUS.jpg", caption: "Gold Coast, Australia", camera: "Canon EOS 200D", date: "2024/01" },
+  { src: "/gallery/NY.jpg", caption: "New York City, NY, US", camera: "iPhone 15", date: "2024/03" },
+  { src: "/gallery/Dali.jpg", caption: "Dali, Yunnan, China", camera: "Kodak Gold200 Film", date: "2024/12" },
+  { src: "/gallery/Dubai.JPG", caption: "Dubai, UAE", camera: "Kodak Gold200 Film", date: "2024/08" },
+  { src: "/gallery/Suzhou.jpg", caption: "Suzhou, Jiangsu, China", camera: "Canon EOS 200D", date: "2024/04" },
+  { src: "/gallery/LA.jpg", caption: "Los Angeles, CA, US", camera: "Canon EOS 200D", date: "2024/04" },
+  { src: "/gallery/Athens.JPG", caption: "Athens, Greece", camera: "Kodak CP200 Film", date: "2024/05" },
+  //{ src: "/gallery/Ithaca.JPG", caption: "Ithaca, NY, US", camera: "5207 Film", date: "2024/08" },
+  { src: "/gallery/Xinjiang.JPG", caption: "Tashkurgan, Xinjiang, China", camera: "Canon EOS 200D", date: "2024/07" },
+  { src: "/gallery/Ithaca2.JPG", caption: "Ithaca, NY, US", camera: "Kodak Gold200 Film", date: "2024/12" },
+];
+---
+
+<div class="gallery">
+  {images.map((image) => (
+    <div class="gallery-item">
+      <img src={image.src} alt="Gallery Image" class="gallery-image" />
+      <div class="gallery-caption">
+        <div>{image.caption}</div>
+        <div class="caption-details">{image.camera} · {image.date}</div>
+      </div>
+    </div>
+  ))}
+</div>
+
+<style>
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+    padding: 16px;
+  }
+  .gallery-item {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5; /* Optional: Add a background color */
+    position: relative; /* Required for caption positioning */
+  }
+  .gallery-image {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  .gallery-image:hover {
+    transform: scale(1.05);
+  }
+  .gallery-caption {
+    text-align: center;
+    padding: 8px;
+    font-size: 14px;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0; /* Hide caption by default */
+    transition: opacity 0.3s ease; /* Smooth fade-in effect */
+  }
+  .gallery-item:hover .gallery-caption {
+    opacity: 1; /* Show caption on hover */
+  }
+  .caption-details {
+    font-size: 12px;
+    color: #666;
+    margin-top: 4px;
+  }
+</style>
